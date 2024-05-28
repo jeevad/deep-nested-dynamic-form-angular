@@ -48,8 +48,6 @@ const materialModules: (any[] | Type<any> | ModuleWithProviders<{}>) = [
   MatInputModule,
   MatListModule,
   MatDatepickerModule,
-  // MatNativeDateModule,
-  // MatMomentDateModule,
   MatSelectModule,
   // MatOptionModule,
   MatCheckboxModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { FieldConfig } from "../../field.interface";
 import { MaterialModule } from "../../../material/material.module";
@@ -17,8 +17,8 @@ import { MaterialModule } from "../../../material/material.module";
   styles: []
 })
 export class RadiobuttonComponent implements OnInit {
-  field!: FieldConfig;
-  group!: FormGroup;
+  @Input() field!: FieldConfig;
+  @Input() group!: FormGroup;
   constructor() {}
   ngOnInit() {}
 }
