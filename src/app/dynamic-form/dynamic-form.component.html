@@ -1,0 +1,18 @@
+<form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
+    <ng-container *ngFor="let field of fields;">
+        @switch (field.type) {
+        @case ('input') {
+        <app-input [field]="field" [group]="form"></app-input>
+        }
+        @case ('select') {
+        <app-select [field]="field" [group]="form"></app-select>
+        }
+        @case ('date') {
+        <app-date [field]="field" [group]="form"></app-date>
+        }
+        <!-- @default {
+              <span>Default case (Not 0 or 1 or 2)</span>
+            } -->
+        }
+    </ng-container>
+</form>
